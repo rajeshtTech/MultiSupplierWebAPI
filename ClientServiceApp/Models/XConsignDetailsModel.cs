@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ClientServiceApp.Models
 {
-    public class XConsignDetailsModel
+    public class XConsignDetailsModel: BaseConsignDetailsModel
     {
         public string ContactAddress { get; set; }
 

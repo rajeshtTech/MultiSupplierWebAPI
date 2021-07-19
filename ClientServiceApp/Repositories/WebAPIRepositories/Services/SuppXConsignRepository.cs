@@ -20,7 +20,7 @@ namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
         { 
         }
 
-        public async Task<SupplierQuoteResponse> GetConsignmentQuote(XConsignDetailsModel consignDetails)
+        public async Task<SupplierQuoteResponse> GetConsignmentQuote(BaseConsignDetailsModel consignDetails)
         {           
             string consignmentString = HttpUtility.UrlEncode(JsonConvert.SerializeObject(consignDetails));
 
@@ -34,5 +34,6 @@ namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
                 return new SupplierQuoteResponse { Name = Constants.SUPPLIER_X, QuoteAmount = quoteAmont, ResponseStatusCode = response.StatusCode };
             }
         }
+        
     }
 }

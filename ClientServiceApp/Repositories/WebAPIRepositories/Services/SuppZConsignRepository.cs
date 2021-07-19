@@ -22,8 +22,8 @@ namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
         {
             _utility = utility;
         }
-
-        public async Task<SupplierQuoteResponse> GetConsignmentQuote(ZConsignDetailsModel consignDetails)
+        
+        public async Task<SupplierQuoteResponse> GetConsignmentQuote(BaseConsignDetailsModel consignDetails)
         {
             string consignmentString = _utility.SearilizeObjToXML<ZConsignDetailsModel>(consignDetails);
 

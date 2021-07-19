@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ClientServiceApp.Models
 {
-    public class YConsignDetailsModel
+    public class YConsignDetailsModel: BaseConsignDetailsModel
     {
         public string Consignee { get; set; }
 

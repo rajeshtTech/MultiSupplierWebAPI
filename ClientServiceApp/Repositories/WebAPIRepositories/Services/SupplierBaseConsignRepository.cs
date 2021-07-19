@@ -1,5 +1,6 @@
 ﻿using ClientServiceApp.Infrastructure.Configuration;
 using ClientServiceApp.Infrastructure.Helper;
+using ClientServiceApp.Models;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
 {
-    public class SupplierBaseConsignRepository
+    public abstract class SupplierBaseConsignRepository
     {
         private IHttpHelper _httpHelper;
         private AppSettings _appSettings;
@@ -18,7 +19,6 @@ namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
             _httpHelper = httpHelper;            
             _appSettings = appSettings.Value;
         }
-
         public async Task<HttpResponseMessage> GetQuoteBySupplierAndServiceName(string suplierName, string serviceName, string queryString)
         {
             var supplierAPIDetails = _appSettings.SuppliersAPIList.Where(supplier => supplier.Name == suplierName).FirstOrDefault();

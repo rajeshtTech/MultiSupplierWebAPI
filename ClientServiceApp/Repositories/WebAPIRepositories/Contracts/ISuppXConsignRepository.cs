@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClientServiceApp.Repositories.WebAPIRepositories
 {
-    public interface ISuppXConsignRepository
-    {
-        public Task<SupplierQuoteResponse> GetConsignmentQuote(XConsignDetailsModel consignDetails);
+    public interface ISuppXConsignRepository : ISuppConsignRepositoryBase
+    {       
     }
 }

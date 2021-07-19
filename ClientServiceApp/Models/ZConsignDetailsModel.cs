@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ClientServiceApp.Models
 {
-    public class ZConsignDetailsModel
+    public class ZConsignDetailsModel: BaseConsignDetailsModel
     {
         public string Source { get; set; }
 

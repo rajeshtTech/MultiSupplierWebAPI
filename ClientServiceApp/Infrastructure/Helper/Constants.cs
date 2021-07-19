@@ -17,5 +17,8 @@ namespace ClientServiceApp.Infrastructure.Helper
 
         public const string SUPPLIER = "Supplier";
         public const string DECIMAL = "decimal";
+
+        //Methods
+        public const string GET_AUTO_MAPPED_OBJECT= "GetAutoMappedObject";
     }
 }

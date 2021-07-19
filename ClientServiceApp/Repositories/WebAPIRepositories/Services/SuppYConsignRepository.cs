@@ -20,7 +20,7 @@ namespace ClientServiceApp.Repositories.WebAPIRepositories.Services
         {
         }
 
-        public async Task<SupplierQuoteResponse> GetConsignmentQuote(YConsignDetailsModel consignDetails)
+        public async Task<SupplierQuoteResponse> GetConsignmentQuote(BaseConsignDetailsModel consignDetails)
         {
             string consignmentString = HttpUtility.UrlEncode(JsonConvert.SerializeObject(consignDetails));
 
